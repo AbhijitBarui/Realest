@@ -40,11 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
-    'listings.apps.ListingsConfig',
-    'realtors.apps.RealtorsConfig',
+    #'listings.apps.ListingsConfig',
+    #'realtors.apps.RealtorsConfig',
     'django.contrib.humanize',
-    'accounts.apps.AccountsConfig',
-    'contacts.apps.ContactsConfig',
+    #'accounts.apps.AccountsConfig',
+    #'contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [
@@ -81,15 +81,15 @@ WSGI_APPLICATION = 'realest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'realestdb',
-        'USER': 'abhijit',
-        'PASSWORD': config('PASSWORD_DB'),
-        'HOST': 'localhost'
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'realestdb',
+#        'USER': 'abhijit',
+#        'PASSWORD': config('PASSWORD_DB'),
+#        'HOST': 'localhost'
+#    }
+#}
 
 
 # Password validation
@@ -136,18 +136,18 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'realest/static'),]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # media settings
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_URL = '/media/'
 
 #messages settings
-from django.contrib.messages import constants as messages
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-}
+#from django.contrib.messages import constants as messages
+#MESSAGE_TAGS = {
+#    messages.ERROR: 'danger',
+#}
 
 #email settings
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'barui240@gmail.com'
-EMAIL_HOST_PASSWORD = config('PASSWORD_EMAIL')
-EMAIL_USE_TLS = True
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_PORT = 587
+#EMAIL_HOST_USER = 'barui240@gmail.com'
+#EMAIL_HOST_PASSWORD = config('PASSWORD_EMAIL')
+#EMAIL_USE_TLS = True
